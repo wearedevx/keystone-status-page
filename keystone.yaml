@@ -1,0 +1,16 @@
+project_id: 854c39c7-0dc5-431f-908a-6f1ef96d82e8
+name: keystone-status-page
+env:
+- key: CF_API_TOKEN
+  strict: true
+- key: CF_ACCOUNT_ID
+  strict: true
+files: []
+options:
+  strict: false
+ci_services:
+- name: keystone-status-page
+  type: github-ci
+  options:
+    Owner: wearedevx
+    Project: keystone-status-page
