@@ -1,5 +1,5 @@
 settings:
-  title: 'Status Page'
+  title: 'Keystone Status Page'
   url: 'https://status.keystone.sh' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
@@ -15,6 +15,14 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
+  - id: keystone-sh
+    name: keystone.sh
+    description: 'Keystone documentation website'
+    url: 'https://keystone.sh'
+    method: GET
+    expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
+
   - id: workers-cloudflare-com # unique identifier
     name: workers.cloudflare.com
     description: 'You write code. They handle the rest.' # default=empty
